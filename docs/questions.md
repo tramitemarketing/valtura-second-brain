@@ -11,7 +11,7 @@ tags:
 
 # Questionario brand e portfolio — Roberto
 
-Questo è il questionario da usare come base. Le prime tre domande sbloccano le altre; poi si procede per topic, con non più di tre domande per messaggio.
+Questo è il questionario da usare come base. Le domande iniziali sbloccano le altre; poi si procede per topic, con non più di tre domande per messaggio.
 
 ## Già chiaro — non serve chiederlo di nuovo
 
@@ -21,9 +21,8 @@ Questo è il questionario da usare come base. Le prime tre domande sbloccano le 
 - Il tono deve essere istituzionale, sobrio e italiano.
 - I dati di immobili reali non si inventano.
 
-## 1. Le prime tre domande
+## 1. Domande iniziali
 
-- [ ] **Struttura e ruolo del sito:** confermi che il sito pubblico iniziale abbia Home raggiungibile dal logo, una sezione VALTURA con identità/metodo/contatti, e una sezione Progetti con indice e schede dedicate? VALTURA Intelligence, Pubblicazioni e l'assistente restano fuori dalla navigazione finché non decidiamo se sono davvero parti pubbliche del brand?
 - [ ] **Censimento del portfolio:** puoi elencare tutti i progetti che VALTURA ha realizzato, controlla, sta trasformando o desidera raccontare, indicando per ciascuno nome, luogo, stato, perché rappresenta VALTURA e se può essere pubblicato ora?
 - [ ] **Identità sostanziale:** quando una persona adatta visita il sito, quale definizione deve portarsi via di VALTURA: che tipo di realtà è, quale trasformazione genera e perché non è né un'agenzia né un portale di annunci?
 
@@ -117,7 +116,6 @@ Queste domande servono a decidere non solo **se** una sezione esiste, ma cosa de
 - [ ] Che cosa deve capire un visitatore prima ancora di scorrere la Home?
 - [ ] I progetti devono apparire già in Home o soltanto nella pagina Progetti?
 - [ ] Pubblicazioni deve esistere davvero come parte della marca oppure va eliminata finché non c'è una linea editoriale reale?
-- [ ] VALTURA Intelligence è un nome di prodotto pubblico, una funzione riservata o un nome interno?
 - [ ] L'assistente deve essere visibile fin dal sito, solo nelle schede progetto o dopo una richiesta?
 - [ ] La voce di menu deve chiamarsi “VALTURA”, “Chi siamo”, “Metodo” o altro?
 
@@ -153,10 +151,7 @@ Queste domande servono a decidere non solo **se** una sezione esiste, ma cosa de
 ## 9. Brand identity — non grafica decorativa
 
 - [ ] Il riferimento ad `architetturaurbana.eu` rappresenta ancora la direzione del brand oppure era solo una soluzione di una fase?
-- [ ] La percezione desiderata è più editoriale/culturale, architettonica, patrimoniale, istituzionale, contemporanea o altro?
-- [ ] Quali elementi del wordmark serif/blu dello stub sono davvero identitari e quali erano provvisori?
 - [ ] Esiste un logo definitivo, un file vettoriale e una regola d'uso? Se no, il logo attuale è da considerare definitivo?
-- [ ] Le immagini devono far percepire soprattutto luogo, materia, intervento, dettaglio architettonico, vita futura o valore patrimoniale?
 - [ ] Le filigrane delle fotografie del Palazzo devono restare come segnale di origine e credibilità? Con quale regola?
 - [ ] Quali tipi di immagine non rappresentano VALTURA, anche se esteticamente belli?
 - [ ] Ci sono riferimenti di brand, anche fuori dal real estate, che restituiscono meglio la personalità desiderata?
@@ -166,8 +161,6 @@ Queste domande servono a decidere non solo **se** una sezione esiste, ma cosa de
 - [ ] Quali parole devono ricorrere perché sono davvero VALTURA?
 - [ ] Oltre a vendita, venduto, prezzo e linguaggio da annuncio, quali parole o promesse non devono mai essere usate?
 - [ ] VALTURA parla come un soggetto collettivo (“noi”), come una firma editoriale o con una voce impersonale?
-- [ ] Quanta storia, tecnica e terminologia immobiliare va resa accessibile a un non specialista?
-- [ ] Come si racconta un limite, un'informazione non disponibile o un dato riservato senza sembrare evasivi?
 - [ ] Il termine “progetto concluso” è quello definitivo per i casi chiusi?
 - [ ] Assistente è il nome pubblico corretto della funzione conversazionale? Quale relazione deve suggerire?
 - [ ] Quali affermazioni rischiano di suonare troppo promozionali anche se sono vere?
@@ -178,17 +171,10 @@ Queste domande servono a decidere non solo **se** una sezione esiste, ma cosa de
 - [ ] Quali campi deve avere il contatto generale, distinti da quelli necessari per chiedere un dossier riservato?
 - [ ] Quale messaggio introduce il contatto: invito alla conversazione, valutazione dell'interesse, proposta di progetto o altro?
 - [ ] Il visitatore deve poter proporre a VALTURA un immobile o un'opportunità? Se sì, serve un percorso dedicato?
-- [ ] La richiesta di accesso ai materiali riservati deve far parte dell'esperienza di marca al lancio o arrivare in una fase successiva?
 - [ ] Come deve sentirsi una persona rifiutata o non ancora qualificata, affinché il brand resti selettivo ma non respingente?
 
 ## 12. Domande operative — solo dopo brand e portfolio
 
-- [ ] Il sito attuale diventa il sito reale o resta dimostrativo? Quale data o checklist definisce l'uscita dalla demo?
-- [ ] Quando il sito passa su `valtura.it` e cosa succede allo stub e alla lista email già raccolta?
-- [ ] Quale budget è approvato per IA, email, hosting e database?
-- [ ] Le approvazioni avvengono con una finestra periodica di staging oppure caso per caso?
-- [ ] Roberto può creare l'account amministratore reale e concedere gli inviti nominali necessari?
-- [ ] Quando è disponibile una finestra per configurare DKIM in Google Workspace?
 
 ## Fonti usate
 

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#103b35" />
+    <meta name="description" content="Questionario ufficiale VALTURA per il confronto con Roberto." />
+    <title>VALTURA — Questionario ufficiale</title>
+    <style>
+      :root { --ink:#19312d; --muted:#63726d; --paper:#f4f5f1; --card:#fff; --line:#d9e0da; --night:#103b35; --lime:#b9d847; --pale:#f2f8d9; }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; }
+      body { margin:0; color:var(--ink); background:var(--paper); font-family:Georgia, "Times New Roman", serif; }
+      a { color:inherit; }
+      button { font:inherit; cursor:pointer; }
+      .header { position:sticky; top:0; z-index:3; padding:15px max(20px, calc((100vw - 1080px)/2)); border-bottom:1px solid rgb(217 224 218 / 88%); background:rgb(244 245 241 / 93%); backdrop-filter:blur(14px); }
+      .header-inner, main { max-width:1080px; margin:0 auto; }
+      .header-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+      .wordmark { color:var(--night); font-size:1.18rem; font-weight:700; letter-spacing:.16em; text-decoration:none; }
+      .back { color:var(--muted); font:600 .72rem/1 Arial,sans-serif; letter-spacing:.1em; text-decoration:none; text-transform:uppercase; }
+      .back:hover { color:var(--night); }
+      main { padding:50px 20px 72px; }
+      .eyebrow { color:#5d7512; font:700 .72rem/1.2 Arial,sans-serif; letter-spacing:.14em; text-transform:uppercase; }
+      h1 { max-width:770px; margin:13px 0; color:var(--night); font-size:clamp(2.55rem, 7vw, 5.45rem); font-weight:500; letter-spacing:-.05em; line-height:.92; }
+      .lead { max-width:680px; margin:0; color:#475954; font-size:clamp(1.05rem, 2vw, 1.2rem); line-height:1.55; }
+      .meta { display:flex; flex-wrap:wrap; gap:10px; margin:29px 0 38px; }
+      .meta span { padding:8px 11px; border:1px solid #dce5bc; border-radius:999px; background:var(--pale); color:#425c18; font:700 .71rem/1 Arial,sans-serif; letter-spacing:.055em; text-transform:uppercase; }
+      .guide { display:grid; grid-template-columns:auto 1fr; gap:14px; max-width:780px; margin-bottom:38px; padding:18px 19px; border:1px solid #dfe7bd; border-radius:16px; background:var(--pale); color:#385019; font-size:1rem; line-height:1.47; }
+      .guide-mark { display:grid; place-items:center; width:26px; height:26px; border-radius:50%; background:var(--lime); color:#26450d; font-family:Arial,sans-serif; font-weight:900; }
+      .utility { display:flex; align-items:center; justify-content:space-between; gap:17px; margin:0 0 23px; padding:14px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+      .utility small { color:var(--muted); font:.78rem/1.4 Arial,sans-serif; }
+      .print { min-height:39px; padding:0 13px; border:1px solid var(--night); border-radius:9px; background:var(--night); color:#fff; font:700 .75rem/1 Arial,sans-serif; }
+      .print:hover { background:#1a5149; }
+      .toc { display:flex; gap:8px; margin:0 -20px 36px; padding:0 20px 5px; overflow-x:auto; scrollbar-width:thin; }
+      .toc a { flex:0 0 auto; padding:9px 12px; border:1px solid var(--line); border-radius:999px; color:#566660; font:600 .74rem/1 Arial,sans-serif; text-decoration:none; white-space:nowrap; }
+      .toc a:hover { border-color:var(--night); background:var(--night); color:#fff; }
+      .document { counter-reset:topic; }
+      .section { margin:0 0 41px; scroll-margin-top:80px; }
+      .section-title { display:flex; align-items:baseline; gap:11px; margin:0 0 14px; color:var(--night); font-size:clamp(1.45rem, 3vw, 2rem); font-weight:500; letter-spacing:-.03em; }
+      .section-title::after { content:""; flex:1; height:1px; background:var(--line); }
+      .items { display:grid; gap:9px; margin:0; padding:0; list-style:none; counter-reset:question; }
+      .item { display:grid; grid-template-columns:32px minmax(0,1fr); gap:14px; align-items:start; padding:15px 17px; border:1px solid var(--line); border-radius:14px; background:var(--card); box-shadow:0 3px 13px rgb(19 50 44 / 3%); color:#263c36; font-size:clamp(1rem, 2vw, 1.1rem); line-height:1.43; }
+      .number { display:grid; place-items:center; width:28px; height:28px; margin-top:1px; border-radius:50%; background:var(--pale); color:#4d6818; font:700 .72rem/1 Arial,sans-serif; }
+      .item strong { color:var(--night); }
+      .loading { margin:24px 0; padding:24px; border:1px dashed #b8c6bd; border-radius:14px; color:var(--muted); text-align:center; }
+      .footer { margin-top:36px; padding-top:19px; border-top:1px solid var(--line); color:var(--muted); font:.76rem/1.4 Arial,sans-serif; }
+      @media (max-width:600px) { main { padding-top:34px; } .utility { align-items:flex-start; flex-direction:column; } .item { grid-template-columns:27px minmax(0,1fr); gap:11px; padding:14px; } .number { width:25px; height:25px; font-size:.67rem; } }
+      @media print { @page { margin:17mm 15mm; } body { background:#fff; } .header, .utility, .toc { display:none; } main { max-width:none; padding:0; } h1 { font-size:37pt; } .lead { font-size:12pt; } .meta { margin-bottom:18px; } .guide { break-inside:avoid; } .section { break-inside:auto; margin-bottom:23px; } .section-title { break-after:avoid; font-size:18pt; } .items { gap:6px; } .item { break-inside:avoid; padding:9px 11px; box-shadow:none; font-size:10.5pt; } .footer { font-size:8.5pt; } }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <a class="wordmark" href="../" aria-label="Torna allo strumento di selezione">VALTURA</a>
+        <a class="back" href="../">Selezione domande</a>
+      </div>
+    </header>
+    <main>
+      <div class="eyebrow">Documento di lavoro ufficiale</div>
+      <h1>Questionario per Roberto.</h1>
+      <p class="lead">La versione ordinata delle domande da affrontare per definire il sito VALTURA: identità, struttura, progetti, voce e relazione.</p>
+      <div class="meta"><span>Versione 1.0</span><span id="total">106 domande</span><span>26 agosto 2026</span></div>
+      <aside class="guide"><span class="guide-mark">i</span><span>Le domande sono raggruppate per argomento. Per il confronto con Roberto, affrontane al massimo tre alla volta e usa le risposte per aggiornare le decisioni del progetto.</span></aside>
+      <div class="utility"><small>Documento ufficiale VALTURA · pronto per la lettura, la stampa o il salvataggio in PDF.</small><button class="print" type="button" onclick="window.print()">Stampa / salva PDF</button></div>
+      <nav id="toc" class="toc" aria-label="Indice degli argomenti"></nav>
+      <section id="document" class="document" aria-live="polite"><p class="loading">Carico il questionario ufficiale…</p></section>
+      <footer class="footer">VALTURA · Questionario strategico per la definizione del sito. Versione ufficiale: 26 agosto 2026.</footer>
+    </main>
+    <script>
+      const documentNode = document.querySelector("#document");
+      const toc = document.querySelector("#toc");
+      const total = document.querySelector("#total");
+      const escapeHtml = (value) => value.replace(/[&<>'"]/g, (character) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", "'":"&#039;", '"':"&quot;" })[character]);
+      const formatText = (value) => escapeHtml(value).replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/`(.*?)`/g, "<strong>$1</strong>");
+      const cleanTopic = (topic) => topic.replace(/^\d+\.\s*/, "");
+      function parse(markdown) {
+        let topic = ""; let id = 0;
+        return markdown.split(/\r?\n/).reduce((items, line) => {
+          const heading = line.match(/^##\s+(.+)$/);
+          if (heading) topic = heading[1].trim();
+          const question = line.match(/^\s*-\s*\[\s*\]\s*(.+)$/);
+          if (question && topic && !topic.startsWith("Già chiaro")) items.push({ id: ++id, topic, text: question[1].trim() });
+          return items;
+        }, []);
+      }
+      fetch("../questions.md").then((response) => { if (!response.ok) throw new Error(); return response.text(); }).then((markdown) => {
+        const questions = parse(markdown);
+        const grouped = questions.reduce((groups, question) => { (groups[question.topic] ||= []).push(question); return groups; }, {});
+        total.textContent = `${questions.length} domande`;
+        toc.innerHTML = Object.entries(grouped).map(([topic, items]) => `<a href="#topic-${items[0].id}">${escapeHtml(cleanTopic(topic))}</a>`).join("");
+        documentNode.innerHTML = Object.entries(grouped).map(([topic, items]) => `<section class="section" id="topic-${items[0].id}"><h2 class="section-title">${escapeHtml(cleanTopic(topic))}</h2><ol class="items">${items.map((question) => `<li class="item"><span class="number">${question.id}</span><span>${formatText(question.text)}</span></li>`).join("")}</ol></section>`).join("");
+      }).catch(() => { documentNode.innerHTML = '<p class="loading">Il questionario non è disponibile. Riprova più tardi.</p>'; });
+    </script>
+  </body>
+</html>

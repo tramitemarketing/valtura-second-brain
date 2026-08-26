@@ -46,7 +46,8 @@
       .header-inner, main { max-width: 1120px; margin: 0 auto; }
       .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
       .wordmark { color: var(--night); font-size: 1.18rem; font-weight: 700; letter-spacing: .16em; text-decoration: none; }
-      .header-note { color: var(--muted); font: 600 .72rem/1.2 Arial, sans-serif; letter-spacing: .11em; text-transform: uppercase; }
+      .header-note { color: var(--muted); font: 600 .72rem/1.2 Arial, sans-serif; letter-spacing: .11em; text-decoration: none; text-transform: uppercase; }
+      .header-note:hover { color: var(--night); }
 
       main { padding: 42px 20px 150px; }
       .eyebrow { color: #5d7512; font: 700 .72rem/1.2 Arial, sans-serif; letter-spacing: .13em; text-transform: uppercase; }
@@ -155,7 +156,7 @@
     <header class="site-header">
       <div class="header-inner">
         <a class="wordmark" href="#inizio" aria-label="Torna all'inizio">VALTURA</a>
-        <span class="header-note">Second brain · domande a Roberto</span>
+        <a class="header-note" href="./ufficiale/">Versione ufficiale</a>
       </div>
     </header>
 
@@ -181,7 +182,7 @@
 
       <div class="list-header">
         <h2 id="list-title">Tutte le domande</h2>
-        <p id="list-summary">120 domande, ordinate per argomento.</p>
+        <p id="list-summary">106 domande, ordinate per argomento.</p>
       </div>
       <section id="questions" class="questions" aria-live="polite"></section>
     </main>
@@ -198,7 +199,7 @@
     <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
     <script>
-      const STORAGE_KEY = "valtura-questionario-selezione-v1";
+      const STORAGE_KEY = "valtura-questionario-selezione-v2";
       let questions = [];
       let selected = new Set();
       let activeTopic = "tutti";
